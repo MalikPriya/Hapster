@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "hapster",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
