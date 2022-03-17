@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+  		<ion-back-button></ion-back-button>
+  	</ion-buttons>
+    <ion-title>Checkout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>Summary</ion-card-header>
+    <ion-card-content>
+      <p>Price <span>Rs 300</span></p>
+      <p>Shipping <span>Rs 40</span></p>
+      <p>Tax <span>Rs 20</span></p>
+      <h5>Total Payment <span>Rs 370</span></h5>
+    </ion-card-content>
+    <div class="ion-footer">
+      See Details <ion-icon name="chevron-forward"></ion-icon>
+    </div>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Address</ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="assets/icon/pin.png"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h5>Electronics Complex</h5>
+          <p>EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091</p>
+          <ion-button routerLink="/address" routerDirection="forward">Change</ion-button>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Payment</ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="assets/icon/indian-rupee.png"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h5>Cash on delivery</h5>
+          <p>Rs 370</p>
+          <ion-button routerLink="/payment" routerDirection="forward">Change</ion-button>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" color="hapster" routerLink="/complete" routerDirection="forward">Place Order</ion-button>
+  </ion-toolbar>
+</ion-footer>

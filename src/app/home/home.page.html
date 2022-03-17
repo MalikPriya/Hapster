@@ -1,20 +1,182 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      <ion-img src="assets/icon/logo.png"></ion-img>
     </ion-title>
+    <ion-buttons slot="end">
+      <!-- <ion-button routerLink="/notification/{{ notificationdetails._id }}" routerDirection="forward" (click)="cancel(list._id)"> -->
+           <ion-button  (click)="notification(notificationdetails._id)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+      </ion-button>
+	  <ion-button routerLink="/cart" routerDirection="forward">
+		  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+	  </ion-button>
+      <ion-button routerLink="/profile" routerDirection="forward">
+        <ion-img src="../../assets/icon/profile.png"></ion-img>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+	<ion-content>
+      	<ion-slides class="offer-list" pager="false" [options]="offerslideOpts">
+        	<ion-slide>
+        		<div class="offer-thumb" routerLink="/stores" routerDirection="forward">
+	          		<span><ion-img src="../../assets/icon/home-icon10.png"></ion-img></span>
+	          		<p>Ending Sale</p>
+	          	</div>
+        	</ion-slide>
+        	<ion-slide>
+        		<div class="offer-thumb" routerLink="/services" routerDirection="forward">
+	          		<span><ion-img src="../../assets/icon/home-icon9.png" ></ion-img></span>
+	          		<p>Services Near Me</p>
+	          	</div>
+        	</ion-slide>
+        	<ion-slide>
+        		<div class="offer-thumb" routerLink="/shopping" routerDirection="forward">
+	          		<span><ion-img src="../../assets/icon/home-icon8.png"></ion-img></span>
+	          		<p>Shopping Near Me</p>
+	          	</div>
+        	</ion-slide>
+        	<ion-slide>
+        		<div class="offer-thumb" routerLink="/upcoming" routerDirection="forward">
+	          		<span><ion-img src="../../assets/icon/home-icon7.png"></ion-img></span>
+	          		<p>Upcoming Near Me</p>
+	          	</div>
+        	</ion-slide>
+        	<ion-slide>
+        		<div class="offer-thumb">
+	          		<span><ion-img src="../../assets/icon/home-icon6.png"></ion-img></span>
+	          		<p>Hapster Corner</p>
+	          	</div>
+        	</ion-slide>
+      	</ion-slides>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      	<ion-slides class="banner-list" pager="false" [options]="bannerslideOpts">
+        	<ion-slide>
+        		<div class="offer-thumb">
+	          		<ion-img src="../../assets/images/home-banner.png"></ion-img>
+	          	</div>
+        	</ion-slide>
+      	</ion-slides>
+
+      	<ion-slides class="category-list" pager="false" [options]="offerslideOpts">
+        	<ion-slide *ngFor="let list of categorydetails; let i = index;">
+        		<div class="category-thumb" routerLink="/category" routerDirection="forward">
+	          		<span><ion-img src="../../assets/icon/home-icon5.png" ></ion-img></span>
+	          		<p>{{list.name }}</p>
+	          	</div>
+        	</ion-slide>
+        <!--	<ion-slide>
+        		<div class="category-thumb" routerLink="/category" routerDirection="forward">
+	          		<span><ion-img src="../../assets/icon/home-icon4.png"></ion-img></span>
+	          		<p>Ethnic</p>
+	          	</div>
+        	</ion-slide>
+        	<ion-slide>
+        		<div class="category-thumb" routerLink="/category" routerDirection="forward">
+	          		<span><ion-img src="../../assets/icon/home-icon3.png"></ion-img></span>
+	          		<p>Food</p>
+	          	</div>
+        	</ion-slide>
+        	<ion-slide>
+        		<div class="category-thumb" routerLink="/category" routerDirection="forward">
+	          		<span><ion-img src="../../assets/icon/home-icon2.png"></ion-img></span>
+	          		<p>Art</p>
+	          	</div>
+        	</ion-slide>
+        	<ion-slide>
+        		<div class="category-thumb" routerLink="/category" routerDirection="forward">
+	          		<span><ion-img src="../../assets/icon/home-icon1.png"></ion-img></span>
+	          		<p>Garden</p>
+	          	</div>
+        	</ion-slide>-->
+      	</ion-slides>
+
+      	<ion-item class="sale-banner">
+      		<ion-avatar slot="start">
+      			<ion-img src="../../assets/images/sale.png"></ion-img>
+      		</ion-avatar>
+      		<ion-label>
+      			<h2>Garage Sale</h2>
+      			<p>Near You</p>
+      		</ion-label>
+      		<ion-button color="hapster"  routerLink="/garagelisting" routerDirection="forward" slot="end">visit</ion-button>
+      	</ion-item>
+
+      	<ion-slides class="banner-list" pager="false" [options]="bannerslideOpts">
+        	<ion-slide>
+        		<div class="offer-thumb">
+	          		<ion-img src="../../assets/images/home-banner-2.png"></ion-img>
+	          	</div>
+        	</ion-slide>
+      	</ion-slides>
+
+
+		<h4 class="sliderHeading">Near By Store</h4>
+		<ion-slides [options]="storeOption" class="storeslider">
+		<!---<ion-slide *ngFor="let list of storedetails;" routerLink="/store-service/{{ list.categoryId._id }}" routerDirection="forward">-->
+        <ion-slide *ngFor="let list of storedetails;" (click)="cancel(list._id)"><!--routerLink="/store-service/{{ list.categoryId._id }}" routerDirection="forward">-->
+				<figure>
+					<ion-img src="{{list.image[0]}}"></ion-img>
+				</figure>
+				<figcaption>
+					<h4>{{ list.title }}</h4>
+					<p>{{ list.city }}{{ list.state }}</p>
+				</figcaption>
+			</ion-slide>
+		<!---	<ion-slide routerLink="/stores" routerDirection="forward">
+				<figure>
+					<ion-img src="assets/images/boutique.jpg"></ion-img>
+				</figure>
+				<figcaption>
+					<h4>Optical Eye Care</h4>
+					<p>Sector V, Bidhannagar, Kolkata, West Bengal 700091</p>
+				</figcaption>
+			</ion-slide>
+			<ion-slide routerLink="/store-details" routerDirection="forward">
+				<figure>
+					<ion-img src="assets/images/store2.jpg"></ion-img>
+				</figure>
+				<figcaption>
+					<h4>Food Corner</h4>
+					<p>Sector V, Bidhannagar, Kolkata, West Bengal 700091</p>
+				</figcaption>
+			</ion-slide>-->
+		</ion-slides>
+		<h4 class="sliderHeading">Near By Garage Sales</h4>
+		<ion-slides [options]="storeOption" class="storeslider">
+			<ion-slide routerLink="/stores" routerDirection="forward">
+				<figure>
+					<ion-img src="assets/images/store2.jpg"></ion-img>
+				</figure>
+				<figcaption>
+					<h4>Das Garage Sale</h4>
+					<p>Sector V, Bidhannagar, Kolkata, West Bengal 700091</p>
+				</figcaption>
+			</ion-slide>
+			<ion-slide routerLink="/stores" routerDirection="forward">
+				<figure>
+					<ion-img src="assets/images/boutique.jpg"></ion-img>
+				</figure>
+				<figcaption>
+					<h4>Tina's Garage Sales</h4>
+					<p>Sector V, Bidhannagar, Kolkata, West Bengal 700091</p>
+				</figcaption>
+			</ion-slide>
+			<ion-slide routerLink="/store-details" routerDirection="forward">
+				<figure>
+					<ion-img src="assets/images/store2.jpg"></ion-img>
+				</figure>
+				<figcaption>
+					<h4>Roy Garage Sales</h4>
+					<p>Sector V, Bidhannagar, Kolkata, West Bengal 700091</p>
+				</figcaption>
+			</ion-slide>
+		</ion-slides>
+    </ion-content>
 </ion-content>

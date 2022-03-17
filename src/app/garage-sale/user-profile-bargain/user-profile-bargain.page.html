@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="second-col">
+          <a routerLink="/home" routerDirection="back"><ion-img src="../../assets/icon/arrow.png"></ion-img></a>
+          <ion-text><h4>Tina's Garage Sale</h4></ion-text>
+        </ion-col>
+        <ion-col class="third-col">
+          <a routerLink="/notification" routerDirection="forward">
+            <ion-img src="assets/icon/menu7.png"></ion-img>
+          </a>
+          <a routerLink="/profile" routerDirection="forward">
+            <ion-img src="../../assets/icon/profile.png"></ion-img>
+          </a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-img src="../../../assets/images/clean-pic.png"></ion-img>
+<ion-card>
+  <h6 class="ion-text-center">Bargain</h6>
+  <form>
+    <ion-row>
+      <label>Item Price by owner</label>
+      <input>
+    </ion-row>
+    <ion-row>
+      <label>Quote your price</label>
+      <input>
+    </ion-row>
+    <p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.</p>
+    <ion-buttons>SEND</ion-buttons>
+  </form>
+</ion-card>
+</ion-content>

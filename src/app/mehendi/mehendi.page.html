@@ -1,0 +1,195 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <!--banner-->
+    <ion-img src="../../assets/images/mehendi-banner.png"></ion-img>
+
+   
+
+    <!--option-section-->
+    <ion-grid>
+      <ion-row>
+        <ion-col class="left-col">
+          <ion-label>
+            <h3>Meera's Mehendi</h3>
+            <div class="rating">
+              <ion-img src="../../assets/icon/star.png" class="star-rating"></ion-img>
+              <ion-text>(4.0)35- Beauty & Style</ion-text>
+            </div>
+          </ion-label>
+         
+        </ion-col>
+        <ion-col class="right-col">
+          <ion-buttons>
+            <ion-button>
+              <ion-img src="../../assets/icon/chat.png"></ion-img>
+            </ion-button>
+            <ion-button>
+              <ion-img src="../../assets/icon/location.png"></ion-img>
+            </ion-button>
+            <ion-button>
+              <ion-img src="../../assets/icon/share.png"></ion-img>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!--offer-card-->
+    <ion-card>
+      <ion-item>
+        <ion-img src="../../assets/icon/icon1.png"></ion-img>
+        <ion-label>
+          <h2>Delivery in 7 days</h2>
+          <h5>Nam nec tellus a odio</h5>
+        </ion-label>
+        <ion-buttons>More Details</ion-buttons>
+      </ion-item>
+    </ion-card>
+
+    <!--filter-->
+    <ion-toolbar class="filter">
+      <ion-text>3 shops available</ion-text>
+      <ion-item>
+        <ion-label><ion-icon src="../../assets/icon/filter.png"></ion-icon>Sort/Filter</ion-label>
+        <ion-select ok-text="Okay" cancel-text="Cancel">
+          <ion-select-option value="dos">DOS</ion-select-option>
+          <ion-select-option value="lunix">Linux</ion-select-option>
+          <ion-select-option value="mac7">Mac OS 7</ion-select-option>
+          <ion-select-option value="mac8">Mac OS 8</ion-select-option>
+          <ion-select-option value="win3.1">Windows 3.1</ion-select-option>
+          <ion-select-option value="win95">Windows 95</ion-select-option>
+          <ion-select-option value="win98">Windows 98</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-toolbar>
+
+    <!--accordion-->
+    <ion-accordion-group value="hands">
+      <ion-accordion value="recommended">
+        <ion-item slot="header">
+          <ion-label>Recommended(3)</ion-label>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-item>
+          <div>
+            <div class="left-part">
+              <ion-img src="../../assets/icon/dot.png" class="dot-icon"></ion-img>
+              <ion-label>Lorem ipsum dolor sit amet</ion-label>
+              <ion-text>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.</ion-text>
+              <div class="details">
+                <span class="price">Rs 49/-</span>
+              <span class="duration">Dur : 1hr</span>
+              </div>
+              <ion-buttons>BOOK</ion-buttons>
+            </div>
+            <div class="right-part">
+              <ion-img src="../../assets/images/mehendi1.png"></ion-img>
+            </div>
+          </div>
+          </ion-item>
+          <ion-item>
+            <div>
+            <div class="left-part">
+              <ion-img src="../../assets/icon/dot.png" class="dot-icon"></ion-img>
+              <ion-label>Lorem ipsum dolor sit amet</ion-label>
+              <ion-text>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.</ion-text>
+              <div class="details">
+                <span class="price">Rs 49/-</span>
+              <span class="duration">Dur : 1hr</span>
+              </div>
+              <ion-buttons>BOOK</ion-buttons>
+            </div>
+            <div class="right-part">
+              <ion-img src="../../assets/images/mehendi2.png"></ion-img>
+            </div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div>
+            <div class="left-part">
+              <ion-img src="../../assets/icon/dot.png" class="dot-icon"></ion-img>
+              <ion-label>Lorem ipsum dolor sit amet</ion-label>
+              <ion-text>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.</ion-text>
+              <div class="details">
+                <span class="price">Rs 49/-</span>
+              <span class="duration">Dur : 1hr</span>
+              </div>
+              <ion-buttons>BOOK</ion-buttons>
+            </div>
+            <div class="right-part">
+              <ion-img src="../../assets/images/mehendi1.png"></ion-img>
+            </div>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-accordion>
+      <ion-accordion value="hands">
+        <ion-item slot="header">
+          <ion-label>Hands(5)</ion-label>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-item>
+          <div>
+            <div class="left-part">
+              <ion-img src="../../assets/icon/dot.png" class="dot-icon"></ion-img>
+              <ion-label>Lorem ipsum dolor sit amet</ion-label>
+              <ion-text>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.</ion-text>
+              <div class="details">
+                <span class="price">Rs 49/-</span>
+              <span class="duration">Dur : 1hr</span>
+              </div>
+              <ion-buttons>BOOK</ion-buttons>
+            </div>
+            <div class="right-part">
+              <ion-img src="../../assets/images/mehendi1.png"></ion-img>
+            </div>
+          </div>
+          </ion-item>
+          <ion-item>
+            <div>
+            <div class="left-part">
+              <ion-img src="../../assets/icon/dot.png" class="dot-icon"></ion-img>
+              <ion-label>Lorem ipsum dolor sit amet</ion-label>
+              <ion-text>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.</ion-text>
+              <div class="details">
+                <span class="price">Rs 49/-</span>
+              <span class="duration">Dur : 1hr</span>
+              </div>
+              <ion-buttons>BOOK</ion-buttons>
+            </div>
+            <div class="right-part">
+              <ion-img src="../../assets/images/mehendi2.png"></ion-img>
+            </div>
+            </div>
+          </ion-item>
+          <ion-item>
+            <div>
+            <div class="left-part">
+              <ion-img src="../../assets/icon/dot.png" class="dot-icon"></ion-img>
+              <ion-label>Lorem ipsum dolor sit amet</ion-label>
+              <ion-text>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.</ion-text>
+              <div class="details">
+                <span class="price">Rs 49/-</span>
+              <span class="duration">Dur : 1hr</span>
+              </div>
+              <ion-buttons>BOOK</ion-buttons>
+            </div>
+            <div class="right-part">
+              <ion-img src="../../assets/images/mehendi1.png"></ion-img>
+            </div>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-accordion>
+    </ion-accordion-group>
+
+</ion-content>

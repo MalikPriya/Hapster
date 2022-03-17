@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+  	  <ion-back-button defaultHref="home"></ion-back-button>
+  	</ion-buttons>
+    <ion-title>Order Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>You have an order from "<ion-text color="hapster">Rahul Mahajan</ion-text>"</p>
+
+  <ion-card>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img src="assets/images/package.png"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h4>Order #1234523345</h4>
+        <p>Sector V, Bidhannagar, Kolkata, West Bengal 700091</p>
+      </ion-label>
+      <ion-icon slot="end" name="chatbubble-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="schedule">
+    <ion-row>
+      <ion-col size="9">
+        <ion-item>
+          <ion-avatar slot="start">
+            <ion-img src="assets/icon/delivery-time.png"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h5>Delivery by tomorrow</h5>
+            <p>14th Jan 2022</p>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-text><ion-icon name="checkmark-circle-outline"></ion-icon> Paid</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <h4 class="product-heading">Product List</h4>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <h4>Product #1234</h4>
+        <h5>Maroon Long Dress <ion-text>x 4</ion-text> </h5>
+      </ion-label>
+      <ion-note slot="end">Rs: 299</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h4>Product #1234</h4>
+        <h5>Maroon Long Dress <ion-text>x 4</ion-text> </h5>
+      </ion-label>
+      <ion-note slot="end">Rs: 299</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h4>Product #1234</h4>
+        <h5>Maroon Long Dress <ion-text>x 4</ion-text> </h5>
+      </ion-label>
+      <ion-note slot="end">Rs: 299</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h4>Product #1234</h4>
+        <h5>Maroon Long Dress <ion-text>x 4</ion-text> </h5>
+      </ion-label>
+      <ion-note slot="end">Rs: 299</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-card class="schedule">
+    <ion-row>
+      <ion-col size="6">
+        <ion-item>
+          <ion-avatar slot="start">
+            <ion-img src="assets/icon/express-delivery.png"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h5>Instant Delivery</h5>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item class="last">
+          <ion-avatar slot="start">
+            <ion-img src="assets/icon/delivery-time.png"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h5>Schedule Delivery</h5>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-item class="shift">
+    <ion-checkbox color="hapster" slot="start"></ion-checkbox>
+    <ion-label>Order Received. Shift to 'in progress' category.</ion-label>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" color="hapsterlight" routerLink="/store-order" routerDirection="forward">Back to Order</ion-button>
+  </ion-toolbar>
+</ion-footer>

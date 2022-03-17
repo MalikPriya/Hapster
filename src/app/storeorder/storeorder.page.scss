@@ -1,0 +1,136 @@
+ion-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-bottom: 16px;
+
+    p {
+        ion-text {
+            font-weight: 500;
+        }
+    }
+
+    ion-card {
+        background: #f6f6f6;
+        border-radius: 10px;
+        box-shadow: none;
+        width: 100%;
+        margin: 0 auto 10px;
+
+        ion-item {
+            --background: transparent;
+            --inner-border-width: 0;
+
+            ion-avatar {
+                border-radius: 0;
+            }
+
+            ion-label {
+                white-space: normal;
+            }
+        }
+    }
+
+    ion-card {
+        &.schedule {
+            background-color: #916a9f;
+
+            ion-item {
+                --inner-padding-end: 0;
+                --padding-start: 11px;
+                --padding-end: 11px;
+                --background: transparent;
+                --color: #fff;
+                border-right: 1px solid #fff;
+
+                &.last {
+                    border: none;
+                }
+
+                ion-img {
+                    filter: invert(1);
+                }
+            }
+
+            ion-row {
+                align-items: center;
+            }
+            h4 {
+                color: #fff;
+            }
+            p {
+                color: #fff;
+            }
+
+            ion-text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                ion-icon {
+                    margin-right: 5px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    ion-list {
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 0;
+        margin: 10px 0;
+
+        ion-item {
+            border-bottom: 1px solid #eee;
+            --inner-border-width: 0;
+            --background: #fcfcfc;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            h5 {
+                ion-text {
+                    color: #666666;
+                }
+            }
+            ion-note {
+                font-size: 14px;
+            }
+        }
+    }
+    .product-heading {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    ion-item {
+        &.shift {
+            --inner-border-width: 0;
+            --padding-start: 10px;
+            --padding-end: 10px;
+            border-radius: 10px;
+            --background: #f6f6f6;
+
+            ion-checkbox {
+                margin-right: 10px;
+            }
+
+            ion-label {
+                white-space: normal;
+                font-size: 12px;
+            }
+        }
+    }
+}
+ion-footer {
+    ion-toolbar {
+        padding: 16px;
+
+        ion-button {
+            margin: 0;
+        }
+    }
+
+    &:before {
+        display: none;
+    }
+}

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="product-image">
+    <ion-img src="assets/icon/upload.png"></ion-img>
+    <p class="ion-text-center">Upload Product Image Here</p>
+  </ion-card>
+  <ion-item>
+    <ion-label position="stacked">Product Name</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Category</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Product Price</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Product Description</ion-label>
+    <ion-textarea type="text"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Size</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Color</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" routerLink="/profile" routerDirection="forward" color="hapster">Add Product</ion-button>
+  </ion-toolbar>
+</ion-footer>

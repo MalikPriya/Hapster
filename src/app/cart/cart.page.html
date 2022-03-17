@@ -1,0 +1,119 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Cart
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/notification" routerDirection="forward">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+      </ion-button>
+      <ion-button>
+        <ion-img src="../../assets/icon/profile.png"></ion-img>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card class="name-card">
+		<ion-item>
+		  <ion-label>
+			<h4>Hapstore Boutique</h4>
+			<h5>Beauty & Style</h5>
+			<p>EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091</p>
+			<p>1.2 miles</p>
+		  </ion-label>
+		  <div slot="end">
+			<div class="rating">
+			  <div class="count">
+				<ion-icon name="star"></ion-icon> <span>4.5</span>
+			  </div>
+			  <div class="count-text">
+				100<br/>Reviews
+			  </div>
+			</div>
+		  </div>
+		</ion-item>
+	  </ion-card>
+	<ion-list>
+	    <ion-item>
+	    	<ion-thumbnail slot="start">
+	    		<ion-img src="assets/images/cart1.png"></ion-img>
+	    	</ion-thumbnail>
+	    	<ion-label>
+	    		<h4>Lorem ipsum dolor</h4>
+				<p>Rs 249/- <a class="remove-btn"><ion-icon name="trash-outline"></ion-icon></a></p>
+			</ion-label>
+			<div class="product-meta" slot="end">
+				<span class="qty-btn">
+					<ion-icon name="remove" (click)="decrement()"></ion-icon>
+					<input type="text" value="{{currentNumber}}">
+					<ion-icon name="add" (click)="increment()"></ion-icon>
+				</span>
+				<h5>Rs 249/-</h5>
+			</div>
+	    </ion-item>
+	    <ion-item>
+	    	<ion-thumbnail slot="start">
+	    		<ion-img src="assets/images/cart2.png"></ion-img>
+	    	</ion-thumbnail>
+	    	<ion-label>
+	    		<h4>Lorem ipsum dolor</h4>
+				<p>Rs 249/- <a class="remove-btn"><ion-icon name="trash-outline"></ion-icon></a></p>
+			</ion-label>
+			<div class="product-meta" slot="end">
+				<span class="qty-btn">
+					<ion-icon name="remove" (click)="decrement()"></ion-icon>
+					<input type="text" value="{{currentNumber}}">
+					<ion-icon name="add" (click)="increment()"></ion-icon>
+				</span>
+				<h5>Rs 249/-</h5>
+			</div>
+	    </ion-item>
+		<ion-item>
+	    	<ion-thumbnail slot="start">
+	    		<ion-img src="assets/images/cart3.png"></ion-img>
+	    	</ion-thumbnail>
+	    	<ion-label>
+	    		<h4>Lorem ipsum dolor</h4>
+				<p>Rs 249/- <a class="remove-btn"><ion-icon name="trash-outline"></ion-icon></a></p>
+			</ion-label>
+			<div class="product-meta" slot="end">
+				<span class="qty-btn">
+					<ion-icon name="remove" (click)="decrement()"></ion-icon>
+					<input type="text" value="{{currentNumber}}">
+					<ion-icon name="add" (click)="increment()"></ion-icon>
+				</span>
+				<h5>Rs 249/-</h5>
+			</div>
+	    </ion-item>
+		<ion-item>
+	    	<ion-thumbnail slot="start">
+	    		<ion-img src="assets/images/cart1.png"></ion-img>
+	    	</ion-thumbnail>
+	    	<ion-label>
+	    		<h4>Lorem ipsum dolor</h4>
+				<p>Rs 249/- <a class="remove-btn"><ion-icon name="trash-outline"></ion-icon></a></p>
+			</ion-label>
+			<div class="product-meta" slot="end">
+				<span class="qty-btn">
+					<ion-icon name="remove" (click)="decrement()"></ion-icon>
+					<input type="text" value="{{currentNumber}}">
+					<ion-icon name="add" (click)="increment()"></ion-icon>
+				</span>
+				<h5>Rs 249/-</h5>
+			</div>
+	    </ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer>
+	<ion-toolbar>
+	  <ion-button expand="block" color="hapster" routerLink="/checkout" routerDirection="forward">
+		<ion-text>7 items<br/><strong>Rs 4567/-</strong></ion-text> <span>Continue <ion-icon name="arrow-forward-outline"></ion-icon></span>
+	  </ion-button>
+	</ion-toolbar>
+  </ion-footer>

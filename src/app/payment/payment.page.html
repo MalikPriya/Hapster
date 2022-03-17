@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Payment Method</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group value="cash">
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="assets/icon/indian-rupee.png"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h5>Cash on delivery</h5>
+          <p>Provide cash on delivery</p>
+        </ion-label>
+        <ion-radio slot="end" value="cash"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="assets/icon/credit-card.png"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h5>Credit Card</h5>
+          <p>4325 XXXX XXXX 3455</p>
+        </ion-label>
+        <ion-radio slot="end" value="card"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="assets/icon/razorpay.png"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h5>RazorPay</h5>
+          <p>Lorem ipsum dolor sit amet</p>
+        </ion-label>
+        <ion-radio slot="end" value="razorpay"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="assets/icon/stripe.png"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h5>Stripe</h5>
+          <p>Lorem ipsum dolor sit amet</p>
+        </ion-label>
+        <ion-radio slot="end" value="stripe"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="assets/icon/gpay.png"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h5>Google Pay</h5>
+          <p>Lorem ipsum dolor sit amet</p>
+        </ion-label>
+        <ion-radio slot="end" value="gpay"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="assets/icon/phonepae.png"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h5>PhonePe</h5>
+          <p>Lorem ipsum dolor sit amet</p>
+        </ion-label>
+        <ion-radio slot="end" value="phonepae"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" color="hapster" routerLink="/checkout" routerDirection="forward">Select Payment Method</ion-button>
+  </ion-toolbar>
+</ion-footer>

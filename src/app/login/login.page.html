@@ -1,0 +1,34 @@
+<ion-content>
+  	<div class="welcome-banner">
+    	<h4>Welcome to Hapster</h4>
+    	<p>Login to connect with your nearest deals</p>
+  	</div>
+  	<div class="login-wrapper">
+    	<div class="login-block">
+	      	<h4 class="ion-text-center">Login to your account</h4>
+	      	<ion-item>
+	        	<ion-input type="email" [(ngModel)]="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Email"></ion-input>
+			</ion-item>
+	      	<ion-item>
+	        	<ion-input [type]="passwordType" [(ngModel)]="password" placeholder="Password"></ion-input>
+				<ion-button slot="end" fill="clear" (click)="showPassword()" class="seeClient">
+				  <ion-icon *ngIf="showPsw==true" name="eye-outline" color="dark" class="iconEye"></ion-icon>
+				  <ion-icon *ngIf="showPsw==false" name="eye-off-outline" color="dark" class="iconEye"></ion-icon>
+				</ion-button>
+	      	</ion-item>
+
+	      	<p class="ion-text-right"><a href="#">Forgot Password ?</a></p>
+	      	<ion-button expand="block" (click)="loginUser()">Log in</ion-button>
+
+	      	<span>or</span>
+
+	      	<a class="otp-login" routerLink="/login-mobile" routerDirection="forward">Login via otp</a>
+	      	<div class="social-login">
+	        	<ion-button class="google-login"><ion-img src="../../assets/icon/google.png"></ion-img>Google</ion-button>
+	        	<ion-button class="facebook-login"><ion-img src="../../assets/icon/facebook.png"></ion-img>Facebook</ion-button>
+	      	</div>
+	      	<p>Don't have an account? <a routerLink="/register" routerDirection="forward" class="signup-button">Sign Up</a> here</p>
+	      	<p>Create your own store <a routerLink="/add-store" routerDirection="forward" class="signup-button">here</a> here</p>
+    	</div>
+  	</div>
+</ion-content>

@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+  		<ion-back-button></ion-back-button>
+  	</ion-buttons>
+    <ion-title>Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let list of chatdetails; let i = index;" routerLink="/chat" routerDirection="forward">
+      <ion-avatar slot="start">
+        <ion-img src="https://ui-avatars.com/api/?name=Roy+Store"></ion-img>
+      </ion-avatar>
+      <ion-text slot="end" color="hapster">08:00</ion-text>
+      <ion-label>
+        <h5></h5>
+        <p class="order-status">Lorem ipsum dolor sit amet </p>
+      </ion-label>
+    </ion-item>
+    <ion-item routerLink="/chat" routerDirection="forward">
+      <ion-avatar slot="start">
+        <ion-img src="https://ui-avatars.com/api/?name=Food+Corner"></ion-img>
+      </ion-avatar>
+      <ion-text slot="end" color="hapster">08:00</ion-text>
+      <ion-label>
+        <h5>Food Corner</h5>
+        <p class="order-status">Lorem ipsum dolor sit amet </p>
+      </ion-label>
+    </ion-item>
+    <ion-item routerLink="/chat" routerDirection="forward">
+      <ion-avatar slot="start">
+        <ion-img src="https://ui-avatars.com/api/?name=Das+Enterprice"></ion-img>
+      </ion-avatar>
+      <ion-text slot="end" color="hapster">08:00</ion-text>
+      <ion-label>
+        <h5>Das Enterprice</h5>
+        <p class="order-status">Lorem ipsum dolor sit amet </p>
+      </ion-label>
+    </ion-item>
+    <ion-item routerLink="/chat" routerDirection="forward">
+      <ion-avatar slot="start">
+        <ion-img src="https://ui-avatars.com/api/?name=Roy+Store"></ion-img>
+      </ion-avatar>
+      <ion-text slot="end" color="hapster">08:00</ion-text>
+      <ion-label>
+        <h5>Roy Store</h5>
+        <p class="order-status">Lorem ipsum dolor sit amet </p>
+      </ion-label>
+    </ion-item>
+    <ion-item routerLink="/chat" routerDirection="forward">
+      <ion-avatar slot="start">
+        <ion-img src="https://ui-avatars.com/api/?name=Food+Corner"></ion-img>
+      </ion-avatar>
+      <ion-text slot="end" color="hapster">08:00</ion-text>
+      <ion-label>
+        <h5>Food Corner</h5>
+        <p class="order-status">Lorem ipsum dolor sit amet </p>
+      </ion-label>
+    </ion-item>
+    <ion-item routerLink="/chat" routerDirection="forward">
+      <ion-avatar slot="start">
+        <ion-img src="https://ui-avatars.com/api/?name=Das+Enterprice"></ion-img>
+      </ion-avatar>
+      <ion-text slot="end" color="hapster">08:00</ion-text>
+      <ion-label>
+        <h5>Das Enterprice</h5>
+        <p class="order-status">Lorem ipsum dolor sit amet </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

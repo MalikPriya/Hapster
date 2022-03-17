@@ -1,0 +1,206 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+  		<ion-back-button></ion-back-button>
+  	</ion-buttons>
+    <ion-title>Store Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-avatar slot="start">
+      <ion-img src="assets/images/store2.jpg"></ion-img>
+    </ion-avatar>
+    <ion-label>
+      <h4>Hello, {{ profileDetails.name }}</h4>
+      <p>You have 15 new orders</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-segment scrollable="true" color="hapster" [(ngModel)]="type" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="new">New</ion-segment-button>
+    <ion-segment-button value="ongoing">Ongoing</ion-segment-button>
+    <ion-segment-button value="complete">Complete</ion-segment-button>
+    <ion-segment-button value="cancelled">Cancelled</ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="type">
+    <div class="product-area" *ngSwitchCase="'new'">
+      <ion-list>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text><span class="success">Paid</span> 5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="primary">New</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text><span class="danger">Unpaid</span> 5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="primary">New</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text><span class="success">Paid</span> 5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="primary">New</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="product-area" *ngSwitchCase="'ongoing'">
+      <ion-list>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text><span class="success">Paid</span> 5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="warning">Ongoing</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text><span class="danger">Unpaid</span> 5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="warning">Ongoing</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text><span class="success">Paid</span> 5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="warning">Ongoing</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="product-area" *ngSwitchCase="'complete'">
+      <ion-list>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text><span class="success">Paid</span> 5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="success">Complete</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text><span class="success">Paid</span> 5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="success">Complete</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text><span class="success">Paid</span> 5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="success">Complete</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="product-area" *ngSwitchCase="'cancelled'">
+      <ion-list>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text>5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="danger">Cancelled</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text>5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="danger">Cancelled</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/storeorder" routerDirection="forward">
+          <ion-avatar slot="start">
+            <ion-img src="assets/images/product8.png"></ion-img>
+          </ion-avatar>
+          <div slot="end">
+            <ion-text><span>Oct 21</span> 08:00</ion-text>
+            <ion-text>5 items</ion-text>
+          </div>
+          <ion-label>
+            <h5>#1234523345</h5>
+            <p class="order-status"><span class="danger">Cancelled</span> Rohan Singh</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,269 @@
+
+<ion-header parallax imageUrl="assets/images/banner5.jpg" height="150">
+  <ion-toolbar color="hapster">
+    <ion-buttons slot="start">
+     <!-- <ion-menu-button></ion-menu-button>-->
+  		  <ion-back-button defaultHref="home"></ion-back-button>
+  	</ion-buttons>
+    <ion-title>Service Store</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="chatbubble-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="share-social-outline"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/cart" routerDirection="forward">
+        <ion-img src="../../assets/icon/profile.png"></ion-img>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="name-card">
+    <ion-item>
+      <ion-label>
+        <h4>{{storedetails.title}}</h4>
+        <h5>{{storedetails.categoryId?.name}}</h5>
+        <p>{{ storedetails.city }} ,{{ storedetails.state }}, {{ storedetails.country }}, {{ storedetails.pin }}</p>
+        <p>1.2 miles</p>
+      </ion-label>
+      <div slot="end">
+        <div class="rating">
+          <div class="count">
+            <ion-icon name="star"></ion-icon> <span>4.5</span>
+          </div>
+          <div class="count-text">
+            100<br/>Reviews
+          </div>
+        </div>
+      </div>
+    </ion-item>
+  </ion-card>
+
+  <ion-segment scrollable="true" color="hapster" [(ngModel)]="type" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="products">Our Products</ion-segment-button>
+    <ion-segment-button value="reviews">Reviews</ion-segment-button>
+    <ion-segment-button value="about">About</ion-segment-button>
+    <ion-segment-button value="payment">Payment Policy</ion-segment-button>
+    <ion-segment-button value="return">Return policy</ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="type">
+    <div class="product-area" *ngSwitchCase="'products'">
+      <ion-accordion-group value="handicrafted">
+        <ion-accordion value="handicrafted">
+          <ion-item slot="header">
+            <ion-label>Handicrafted</ion-label>
+          </ion-item>
+
+          <ion-list class="store-list" slot="content">
+            <ion-item *ngFor="let list of productdetails;" >
+              <ion-label>
+                <h4>{{ list.title }}</h4>
+                <h5>{{ list.price }} <span>Dur: 1hr</span></h5>
+                <p>{{ list.shortDesc}}</p>
+                <ion-button>Book</ion-button>
+              </ion-label>
+              <ion-thumbnail slot="end">
+                <ion-img src="{{ list.image }}"></ion-img>
+              </ion-thumbnail>
+            </ion-item>
+            <!-- <ion-item>
+              <ion-label>
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <h5>Rs 899/- <span>Dur: 1hr</span></h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <ion-button>Book</ion-button>
+              </ion-label>
+              <ion-thumbnail slot="end">
+                <ion-img src="assets/images/cart1.png"></ion-img>
+              </ion-thumbnail>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <h5>Rs 899/- <span>Dur: 1hr</span></h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <ion-button>Book</ion-button>
+              </ion-label>
+              <ion-thumbnail slot="end">
+                <ion-img src="assets/images/cart1.png"></ion-img>
+              </ion-thumbnail>
+            </ion-item> -->
+          </ion-list>
+        </ion-accordion>
+
+        <ion-accordion>
+          <ion-item slot="header">
+            <ion-label>Hand Made</ion-label>
+          </ion-item>
+          <ion-list class="store-list" slot="content">
+            <ion-item *ngFor="let list of productdetails;">
+              <ion-label>
+                <h4>{{ list.title }}</h4>
+                <h5>{{ list.price }} <span>Dur: 1hr</span></h5>
+                <p>{{ list.shortDesc }}</p>
+                <ion-button>Book</ion-button>
+              </ion-label>
+              <ion-thumbnail slot="end">
+                <ion-img src="{{ list.image }}"></ion-img>
+              </ion-thumbnail>
+            </ion-item>
+            <!-- <ion-item>
+              <ion-label>
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <h5>Rs 899/- <span>Dur: 1hr</span></h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <ion-button>Book</ion-button>
+              </ion-label>
+              <ion-thumbnail slot="end">
+                <ion-img src="assets/images/cart1.png"></ion-img>
+              </ion-thumbnail>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <h5>Rs 899/- <span>Dur: 1hr</span></h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <ion-button>Book</ion-button>
+              </ion-label>
+              <ion-thumbnail slot="end">
+                <ion-img src="assets/images/cart1.png"></ion-img>
+              </ion-thumbnail>
+            </ion-item> -->
+          </ion-list>
+        </ion-accordion>
+
+        <ion-accordion>
+          <ion-item slot="header">
+            <ion-label>Crafted</ion-label>
+          </ion-item>
+          <ion-list class="store-list" slot="content">
+            <ion-item>
+              <ion-label>
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <h5>Rs 899/- <span>Dur: 1hr</span></h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <ion-button>Book</ion-button>
+              </ion-label>
+              <ion-thumbnail slot="end">
+                <ion-img src="assets/images/cart1.png"></ion-img>
+              </ion-thumbnail>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <h5>Rs 899/- <span>Dur: 1hr</span></h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <ion-button>Book</ion-button>
+              </ion-label>
+              <ion-thumbnail slot="end">
+                <ion-img src="assets/images/cart1.png"></ion-img>
+              </ion-thumbnail>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <h5>Rs 899/- <span>Dur: 1hr</span></h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <ion-button>Book</ion-button>
+              </ion-label>
+              <ion-thumbnail slot="end">
+                <ion-img src="assets/images/cart1.png"></ion-img>
+              </ion-thumbnail>
+            </ion-item>
+          </ion-list>
+        </ion-accordion>
+      </ion-accordion-group>
+    </div>
+    <div class="list-area" *ngSwitchCase="'reviews'">
+      <ion-list class="review-list">
+        <ion-item>
+          <ion-avatar slot="start">
+            <ion-img src="https://ui-avatars.com/api/?name=John+Doe"></ion-img>
+          </ion-avatar>
+          <ion-note slot="end">5s ago</ion-note>
+          <ion-label>
+            <h4>Jhon Doe</h4>
+            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-avatar slot="start">
+            <ion-img src="https://ui-avatars.com/api/?name=John+Doe"></ion-img>
+          </ion-avatar>
+          <ion-note slot="end">5s ago</ion-note>
+          <ion-label>
+            <h4>Jhon Doe</h4>
+            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-avatar slot="start">
+            <ion-img src="https://ui-avatars.com/api/?name=John+Doe"></ion-img>
+          </ion-avatar>
+          <ion-note slot="end">5s ago</ion-note>
+          <ion-label>
+            <h4>Jhon Doe</h4>
+            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-avatar slot="start">
+            <ion-img src="https://ui-avatars.com/api/?name=John+Doe"></ion-img>
+          </ion-avatar>
+          <ion-note slot="end">5s ago</ion-note>
+          <ion-label>
+            <h4>Jhon Doe</h4>
+            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit.</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="list-area" *ngSwitchCase="'about'">
+      <div class="content-box">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12">
+              <p>{{storedetails.about}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+    <div class="list-area" *ngSwitchCase="'payment'">
+      <div class="content-box">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12">
+              <p>{{storedetails.paymentPolicy}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+    <div class="list-area" *ngSwitchCase="'return'">
+      <div class="content-box">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12">
+              <p>{{storedetails.returnPolicy}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+  </div>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" color="hapster" routerLink="/booking" routerDirection="forward">
+      <ion-text>7 items<br/><strong>Rs 4567/-</strong></ion-text> <span>Book Now <ion-icon name="arrow-forward-outline"></ion-icon></span>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

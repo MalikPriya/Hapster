@@ -1,0 +1,35 @@
+ion-img{
+  height: 50vh;
+  object-fit: cover;
+}
+.login-wrapper {
+  margin: 0px auto;
+  margin-top: -20px;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+  z-index: 9;
+  background: #fff;
+  padding-top: 20px;
+
+  .login-block {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  h3{
+    font-weight: 600;
+    font-size: 25px;
+    color: #000;
+  }
+  p{
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 20px 0;
+  }
+  .button + .button {
+    margin-top: 20px;
+  }
+}

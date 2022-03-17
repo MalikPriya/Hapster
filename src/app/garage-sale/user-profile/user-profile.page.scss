@@ -1,0 +1,99 @@
+ion-row{
+    ion-col{
+      &.first-col{
+        flex-grow: 1;
+        ion-img{
+          width: 30px;
+        }
+        ion-menu-button{
+          margin-top: 8px;
+        }
+      }
+      &.second-col{
+        flex-grow: 3;
+        display: flex;
+        align-items: center;
+        ion-img{
+          width: 30px;
+          margin-right: 10px;
+        }
+      }
+      &.third-col{
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        ion-img{
+          width: 40px;
+          height: 35px;
+          margin: 5px;
+        }
+      }
+    }
+  }
+  .user-info{
+      margin: 10px 0px;
+      border-bottom: 10px solid #f2f1f6;
+
+    .user-profile-col1{
+        flex: 1;
+            ion-img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                object-fit: cover;
+            }
+    }
+    .user-profile-col2{
+        flex: 4;
+        ion-list{
+            border: 1px solid #cfcfcf;
+            padding: 0px !important;
+            ion-item{
+                h4{
+                    font-size: 15px;
+                    margin: 0px 0px;
+                }
+            }
+        }
+    }
+    .user-profile-col3{
+        ion-img{
+            width: 30px;
+            margin: 10px 0px;
+        }
+    }
+  }
+  .user-icon-grid{
+      padding: 20px;
+      ion-col{
+          padding: 5px;
+          ion-img{
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              object-fit: contain;
+              padding: 15px;
+              box-shadow: 0px 0px 5px grey;
+          }
+          h5{
+              font-size: 17px;
+              text-align: center;
+          }
+      }
+  }
+  ion-buttons{
+    background-color: #a02492;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+  }

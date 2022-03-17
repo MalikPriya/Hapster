@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Address</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/add-address" routerDirection="forward">
+        <ion-icon slot="start" name="add-outline"></ion-icon> Add Address
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group value="home">
+      <ion-item *ngFor="let list of addressDetails;">
+        <ion-avatar slot="start">
+
+          <ion-img src="assets/icon/pin.png"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h5>{{ list.street }}</h5>
+          <p>{{ list.city }},{{ list.state }} ,{{ list.pincode }}</p>
+        </ion-label>
+        <ion-radio slot="end" value="home"></ion-radio>
+      </ion-item>
+     <!--- <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="assets/icon/pin.png"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h5>Electronics Complex</h5>
+          <p>EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091</p>
+        </ion-label>
+        <ion-radio slot="end" value="office"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="assets/icon/pin.png"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h5>Electronics Complex</h5>
+          <p>EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091</p>
+        </ion-label>
+        <ion-radio slot="end" value="other"></ion-radio>
+      </ion-item>-->
+    </ion-radio-group>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" color="hapster" routerLink="/checkout" routerDirection="forward">Select Address</ion-button>
+  </ion-toolbar>
+</ion-footer>

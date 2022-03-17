@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+  		<ion-back-button></ion-back-button>
+  	</ion-buttons>
+    <ion-title>Hapstore Boutique</ion-title> 
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="chatbubble-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="share-social-outline"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/cart" routerDirection="forward">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-slides class="product-banner" [options]="productBanner">
+    <ion-slide>
+      <ion-img src="assets/images/bot1.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/images/bot2.png"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/images/bot3.jpg"></ion-img>
+    </ion-slide>
+  </ion-slides> 
+  <ion-item>
+    <ion-label>
+      <h4>Amet consectetur adipisicing elit</h4>
+      <h5>Handicrafted</h5>
+      <h5><del>Rs 1099</del> <strong>Rs 799</strong></h5>
+    </ion-label>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-header>
+      <h4>Product Description</h4>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Enim impedit sed iure ducimus unde perspiciatis ad voluptatem</li>
+        <li>eaque a esse distinctio voluptas repudiandae eum cumque nisi totam amet autem quia.</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h4>Check Availability</h4>
+    </ion-card-header>
+    <ion-item>
+      <ion-label>Select Size</ion-label>
+      <ion-select interface="action-sheet">
+        <ion-select-option value="s">S</ion-select-option>
+        <ion-select-option value="m">M</ion-select-option>
+        <ion-select-option value="l">L</ion-select-option>
+        <ion-select-option value="xl">XL</ion-select-option>
+        <ion-select-option value="xxl">XXL</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Select Color</ion-label>
+      <ion-select interface="action-sheet">
+        <ion-select-option value="s">S</ion-select-option>
+        <ion-select-option value="m">M</ion-select-option>
+        <ion-select-option value="l">L</ion-select-option>
+        <ion-select-option value="xl">XL</ion-select-option>
+        <ion-select-option value="xxl">XXL</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Set Qty</ion-label>
+      <ion-input type="number" class="ion-text-right" value="1"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h4>Check Delivery Date & Pin Code</h4>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="fixed">Enter Pincode:</ion-label>
+        <ion-input class="ion-text-right" type="text" placeholder="700000"></ion-input>
+        <ion-icon slot="end" name="location-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>Delivery by</ion-label>
+        <ion-text class="ion-text-right">12 Feb, 2022</ion-text>
+        <ion-icon slot="end" name="calendar-outline"></ion-icon>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" color="hapster" routerLink="/cart" routerDirection="forward">
+      Add to cart
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

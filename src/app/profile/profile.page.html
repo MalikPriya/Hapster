@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+  	</ion-buttons>
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/editprofile" routerDirection="forward">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-avatar slot="start">
+      <ion-img src="assets/images/store2.jpg"></ion-img>
+    </ion-avatar>
+    <ion-label>
+      <h4>{{profileDetails.name }}</h4>
+      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+    </ion-label>
+  </ion-item>
+
+  <ion-grid class="product-meta">
+    <ion-row>
+      <ion-col size="6">
+        <ion-item>
+          <ion-icon slot="start" name="call-outline"></ion-icon>
+          <ion-label>{{ profileDetails.phone }}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item>
+          <ion-icon slot="start" name="mail-outline"></ion-icon>
+          <ion-label>{{ profileDetails.email }}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="product-option">
+    <ion-row>
+      <ion-col size="4">
+        <ion-img src="assets/icon/favourite.png"></ion-img>
+        <p>4.5<br/>100+ Reviews</p>
+      </ion-col>
+      <ion-col size="4">
+        <ion-img src="assets/icon/clipboard.png"></ion-img>
+        <p>110+<br/>Products</p>
+      </ion-col>
+      <ion-col size="4">
+        <ion-img src="assets/images/package.png"></ion-img>
+        <p>500+<br/>Orders</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="product-wrap">
+    <ion-row>
+      <ion-col size="12">
+        <h4>My Products <ion-text routerLink="/add-product" routerDirection="forward"><ion-icon name="add-outline"></ion-icon> Add Product</ion-text></h4>
+      </ion-col>
+      <ion-col *ngFor="let list of productdetails; let i = index;" size="4" routerLink="/details" routerDirection="forward">
+        <figure>
+          <ion-img src="assets/images/bot1.jpg"></ion-img>
+        </figure>
+        <figcaption>
+          <h4>{{ list.title }}</h4>
+          <h5>{{ list.price }}</h5>
+        </figcaption>
+      </ion-col>
+     <!--- <ion-col size="4" routerLink="/details" routerDirection="forward">
+        <figure>
+          <ion-img src="assets/images/bot2.png"></ion-img>
+        </figure>
+        <figcaption>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <h5>Rs 899/-</h5>
+        </figcaption>
+      </ion-col>
+      <ion-col size="4" routerLink="/details" routerDirection="forward">
+        <figure>
+          <ion-img src="assets/images/bot3.jpg"></ion-img>
+        </figure>
+        <figcaption>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <h5>Rs 899/-</h5>
+        </figcaption>
+      </ion-col>
+      <ion-col size="4" routerLink="/details" routerDirection="forward">
+        <figure>
+          <ion-img src="assets/images/bot4.jpg"></ion-img>
+        </figure>
+        <figcaption>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <h5>Rs 899/-</h5>
+        </figcaption>
+      </ion-col>
+      <ion-col size="4" routerLink="/details" routerDirection="forward">
+        <figure>
+          <ion-img src="assets/images/bot2.png"></ion-img>
+        </figure>
+        <figcaption>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <h5>Rs 899/-</h5>
+        </figcaption>
+      </ion-col>
+      <ion-col size="4" routerLink="/details" routerDirection="forward">
+        <figure>
+          <ion-img src="assets/images/bot3.jpg"></ion-img>
+        </figure>
+        <figcaption>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <h5>Rs 899/-</h5>
+        </figcaption>
+      </ion-col>
+      <ion-col size="4" routerLink="/details" routerDirection="forward">
+        <figure>
+          <ion-img src="assets/images/bot4.jpg"></ion-img>
+        </figure>
+        <figcaption>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <h5>Rs 899/-</h5>
+        </figcaption>
+      </ion-col>-->
+    </ion-row>
+  </ion-grid>
+</ion-content>

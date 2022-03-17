@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+  		<ion-back-button></ion-back-button>
+  	</ion-buttons>
+    <ion-title>Jhon Gasrage Sale</ion-title> 
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="chatbubble-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="share-social-outline"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/cart" routerDirection="forward">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-slides class="product-banner" [options]="productBanner">
+    <ion-slide>
+      <ion-img src="assets/images/bot1.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/images/bot2.png"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/images/bot3.jpg"></ion-img>
+    </ion-slide>
+  </ion-slides> 
+  <ion-item>
+    <ion-label>
+      <h4>Amet consectetur adipisicing elit</h4>
+      <h5>Handicrafted</h5>
+      <h5><del>Rs 1099</del> <strong>Rs 799</strong></h5>
+    </ion-label>
+  </ion-item>
+
+  <ion-card class="bargain-block" *ngIf="showBargain">
+    <ion-card-header>Bargain</ion-card-header>
+    <ion-item>
+      <ion-label position="fixed">Item price by owner</ion-label>
+      <ion-input type="number" class="ion-text-right" readonly="readonly" value="299"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Quote your price</ion-label>
+      <ion-input type="number" class="ion-text-right"></ion-input>
+    </ion-item>
+    <ion-card-content>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolores illum earum cumque, nam itaque sint voluptates doloribus sed, harum debitis temporibus veniam pariatur reprehenderit laudantium? Quod ex vel error?</p>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-button expand="block" color="light" (click)="showBuyNow = !showBuyNow">Send Quote</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="garege-product-meta">
+    <ion-item>
+      <ion-text slot="start">Used</ion-text>
+      <ion-label>10 - 15 times</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-text slot="start">Condition</ion-text>
+      <ion-label>Re Fubrished</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-text slot="start">Home Visit</ion-text>
+      <ion-label>No Availabel</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h4>Product Description</h4>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Enim impedit sed iure ducimus unde perspiciatis ad voluptatem</li>
+        <li>eaque a esse distinctio voluptas repudiandae eum cumque nisi totam amet autem quia.</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h4>Check Delivery Date & Pin Code</h4>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="fixed">Enter Pincode:</ion-label>
+        <ion-input class="ion-text-right" type="text" placeholder="700000"></ion-input>
+        <ion-icon slot="end" name="location-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>Delivery by</ion-label>
+        <ion-text class="ion-text-right">12 Feb, 2022</ion-text>
+        <ion-icon slot="end" name="calendar-outline"></ion-icon>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" color="hapster" *ngIf="!showBuyNow" (click)="showBargain = !showBargain">
+      Bargain
+    </ion-button>
+    <ion-button expand="block" color="hapster" *ngIf="showBuyNow">
+      Buy Now
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

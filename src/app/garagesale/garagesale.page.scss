@@ -1,0 +1,114 @@
+ion-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+
+    // ion-item.text-box {
+    //     border: none;
+    //     --inner-border-width: 0;
+    //     --padding-start: 0;
+    //     --padding-end: 0;
+    //     --inner-padding-end: 0;
+    //     --min-height: 64px;
+
+    //     ion-label {
+    //         margin-bottom: 10px;
+    //     }
+
+    //     ion-input {
+    //         background: #f0f0f0;
+    //         border-radius: 6px;
+
+    //         input {
+    //             height: 40px;
+    //         }
+    //     }
+    // }
+    ion-item {
+        --background: transparent;
+        --padding-start: 0;
+        --inner-padding-end: 0;
+        --color: #000;
+        --inner-border-width: 0;
+        margin-bottom: 10px;
+        --border-width: 0;
+
+        &.datetime {
+            --background: #fafafa;
+            border-radius: 10px;
+            border: 1px solid #eaeaea;
+            --inner-padding-end: 0;
+            --padding-start: 16px;
+            --padding-end: 16px;
+
+            ion-icon {
+                margin-right: 5px;
+            }
+            ion-text {
+                margin-left: 5px;
+            }
+            ion-label {
+                margin: 0;
+            }
+        }
+
+        ion-label {
+            font-size: 15px;
+            --color: #adadad;
+            font-weight: 400;
+            margin: 0 0 10px;
+            transform: none;
+        }
+
+        &.location {
+            ion-input {
+                border-radius: 0;
+            }
+        }
+
+        ion-input {
+            --background: #fafafa;
+            --padding-start: 16px;
+            --padding-end: 16px;
+            --padding-top: 10px;
+            --padding-bottom: 10px;
+            line-height: 20px;
+            border-radius: 10px;
+            border: 1px solid #eaeaea;
+
+            &.first {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            &.last {
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+
+        &.select-box {
+            --background: #fafafa;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            --min-height: 40px;
+            --padding-start: 16px;
+            --padding-end: 16px;
+
+            ion-label {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+ion-footer {
+    ion-toolbar {
+        padding: 16px;
+
+        ion-button {
+            margin: 0;
+        }
+    }
+
+    &:before {
+        display: none;
+    }
+}

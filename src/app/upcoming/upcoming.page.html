@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+  		<ion-back-button></ion-back-button>
+  	</ion-buttons>
+    <ion-title>Nearest Upcoming</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="changeView()"><ion-icon slot="icon-only" [name]="buttonIcon"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div #map id="map" *ngIf="view=='map'"></div>
+	<div class="list-area" *ngIf="view=='list'">
+		<ion-list>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-img src="assets/images/cart1.png"></ion-img>
+        </ion-thumbnail>
+        <ion-label>
+          <h4>Decathlon Salt lake</h4>
+          <p>EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091</p>
+          <small>5 miles</small>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-img src="assets/images/cart2.png"></ion-img>
+        </ion-thumbnail>
+        <ion-label>
+          <h4>Croma</h4>
+          <p>Aurora water front, Street Number 18, Bidhannagar, Kolkata, West Bengal 700091</p>
+          <small>2 miles</small>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-img src="assets/images/cart3.png"></ion-img>
+        </ion-thumbnail>
+        <ion-label>
+          <h4>Kishor Variety Store</h4>
+          <p>Street Number 18, Mahish Bathan, Sector V, Bidhannagar, Kolkata, West Bengal 700102</p>
+          <small>500 meters</small>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+	</div>
+</ion-content>

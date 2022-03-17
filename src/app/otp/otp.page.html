@@ -1,0 +1,12 @@
+<ion-content>
+  	<div class="welcome-banner"></div>
+  	<div class="login-wrapper">
+  		<div class="login-block">
+	    	<h4 class="ion-text-center">Verify Phone No</h4>
+			<p>Code is sent to {{phone}}</p>
+	      	<ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:4}"></ng-otp-input>
+	      	<p class="otp-text">Didn’t receive code? <a href="" (click)="retryOtp()>Request again</a></p>
+	      	<ion-button expand="block" routerLink="/home" routerDirection="forward">Verify and create account</ion-button>
+      	</div>
+  	</div>
+</ion-content>

@@ -1,0 +1,56 @@
+ion-header {
+    ion-button {
+        letter-spacing: 0;
+        font-size: 14px;
+    }
+}
+ion-content {
+    .garage-list {
+        padding: 0 16px;
+        
+        ion-item {
+            --padding-start: 0;
+            --padding-end: 0;
+            --inner-padding-end: 0;
+            --inner-border-width: 0;
+            border-bottom: 1px solid #eee;
+
+            ion-thumbnail {
+                width: 80px;
+                height: 80px;
+                margin-right: 10px;
+
+                ion-img {
+                    border-radius: 6px;
+                }
+            }
+            ion-label {
+                white-space: normal;
+
+                h4 {
+                    font-size: 16px;
+                    color: #000;
+                    font-weight: 500;
+                    margin: 0 0 5px;
+                }
+                p {
+                    font-size: 12px;
+                    line-height: 1.1;
+                    margin: 0 0 5px;
+                }
+                h5 {
+                    span {
+                        background: #f0f0f0;
+                        color: #000;
+                        display: inline-block;
+                        padding: 0 10px;
+                        height: 24px;
+                        line-height: 24px;
+                        border-radius: 4px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,47 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="reveal">
+      <ion-content>
+        <ion-card routerLink="/profile" routerDirection="root">
+          <ion-item class="name-card">
+            <ion-avatar slot="start">
+              <ion-img src="https://ui-avatars.com/api/?name=John+Doe"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h4>Jhon Doe</h4>
+              <p>shop@hapster.com</p>
+            </ion-label>
+          </ion-item>
+        </ion-card>
+        <ion-list id="inbox-list">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <!-- <ion-list id="labels-list">
+          <ion-list-header>Labels</ion-list-header>
+
+          <ion-item *ngFor="let label of labels" lines="none">
+            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label>{{ label }}</ion-label>
+          </ion-item>
+        </ion-list> -->
+      </ion-content>
+      <ion-footer>
+        <ion-toolbar>
+          <ion-item>
+            <ion-icon slot="start" name="power"></ion-icon>
+            <ion-label>
+              Log Out
+            </ion-label>
+          </ion-item>
+        </ion-toolbar>
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
