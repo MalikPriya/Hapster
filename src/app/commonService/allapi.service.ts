@@ -110,11 +110,13 @@ export class AllapiService {
     }
 
 
-    Cartlist(customerId:any){
-      return this._http.get<any>(_apiUrl + 'cart/list/'+customerId);
+    Cartlist(){
+      return this._http.get<any>(_apiUrl + 'cart/list/');
     }
 
-
+    Cartlistcustomerwise(customerId:any){
+      return this._http.get<any>(_apiUrl + 'cart/list/'+customerId);
+    }
     getStoreById(id : any){
       return this._http.get<any>(_apiUrl + 'store/detail/'+id);
     }
